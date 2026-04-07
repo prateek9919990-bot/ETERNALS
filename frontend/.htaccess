@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.eternalelevator\.com [NC]
+RewriteRule ^(.*)$ https://eternalelevator.com/$1 [L,R=301]
+
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+# your existing redirect code...
