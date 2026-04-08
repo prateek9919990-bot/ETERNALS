@@ -26,7 +26,7 @@ connectDB();
 app.use(cors({
   origin: [
      process.env.WEBSITE_URL || "https://eternalelevator.com",
-     process.env.ADMIN_URL || "https://eternalelevator.com/admin/login.html",
+     process.env.ADMIN_URL || "https://eternalelevator.com",
     "http://127.0.0.1:5500"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
