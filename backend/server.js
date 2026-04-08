@@ -22,15 +22,16 @@ const adminRoutes = require("./routes/adminRoutes");
 // Connect DB
 connectDB();
 
-// Middleware
+
 app.use(cors({
   origin: [
-     process.env.CLIENT_URL || "https://eternalelevator.com",
+    process.env.CLIENT_URL,
     "http://127.0.0.1:5500"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
